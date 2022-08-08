@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: configure
+      run: ./configure      
+    - name: Install clang (MacOS)
+      shell: bash
+      run: |
+        clang -Wall clang.11.elf.c.safe_stack.cpp -O2 -g -gdwarf-5 -o clang.7.macho.cpp.safe_stack -fsanitize=safe-stack
