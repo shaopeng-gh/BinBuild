@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clang.11.elf.c.safe_stack.cpp">
+    <ClCompile Include="hellocpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
