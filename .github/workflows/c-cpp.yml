@@ -16,4 +16,5 @@ jobs:
     - name: Install clang (MacOS)
       shell: bash
       run: |
+        pwd
         clang -Wall clang.11.elf.c.safe_stack.cpp -O2 -g -gdwarf-5 -o clang.7.macho.cpp.safe_stack -fsanitize=safe-stack
