@@ -17,4 +17,7 @@ jobs:
       shell: bash
       run: |
         pwd
+        ls
+        cd AllBuilds
+        cd clang.11.elf.c.safe_stack
         clang -Wall clang.11.elf.c.safe_stack.cpp -O2 -g -gdwarf-5 -o clang.7.macho.cpp.safe_stack -fsanitize=safe-stack
