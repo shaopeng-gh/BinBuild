@@ -16,7 +16,6 @@ jobs:
     - name: Run clang
       shell: bash
       run: |
-        choco install llvm
         clang --version
         cd AllBuilds
         cd clang.macho.safe_stack

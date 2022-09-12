@@ -16,6 +16,7 @@ jobs:
     - name: Run clang
       shell: bash
       run: |
+        clang --version
         cd AllBuilds
         cd clang.macho.safe_stack
         clang -Wall helloc.c -O2 -g -gdwarf-5 -o hellocpp_with_safe_stack -fsanitize=safe-stack
