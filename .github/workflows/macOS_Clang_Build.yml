@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: macOS_Clang_Build
 
 on:
   push:
