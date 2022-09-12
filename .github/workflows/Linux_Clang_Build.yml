@@ -1,0 +1,22 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run clang
+      shell: bash
+      run: |
+        cd AllBuilds
+        cd clang.macho.safe_stack
+        clang -Wall helloc.c -O2 -g -gdwarf-5 -o hellocpp_with_safe_stack -fsanitize=safe-stack
+        
